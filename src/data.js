@@ -2,7 +2,7 @@
 export const APP_URL = 'https://app.minivoce3d.com.br' // TODO: URL real do criador
 export const WHATSAPP = '5511999999999' // TODO: DDI+DDD+número
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Quero saber mais sobre os colecionáveis MiniVocê 3D.')}`
-export const REPO_URL = 'https://github.com/SEU-USUARIO/minivoce-3d-web'
+export const REPO_URL = 'https://github.com/Kavmkt/minivoce-3d-web'
 
 export const navLinks = [
   { href: '#como-funciona', label: 'Como Funciona' },
