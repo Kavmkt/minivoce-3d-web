@@ -1,26 +1,26 @@
 // Conteúdo editável do site. Altere aqui prazos, links e textos sem mexer nos componentes.
 export const APP_URL = 'https://app.minivoce3d.com.br' // TODO: URL real do criador
-export const WHATSAPP = '5511999999999' // TODO: DDI+DDD+número
+export const WHATSAPP = '5511993697504'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Quero saber mais sobre os colecionáveis MiniVocê 3D.')}`
 // Links de pagamento do Mercado Pago (Link de pagamento criado no painel do Mercado Pago).
 // Enquanto estiver vazio, o botão abre o WhatsApp com a mensagem de compra.
 export const CHECKOUT = {
-  casal: '', // TODO: cole aqui o link de pagamento do plano "Casal" (R$ 190)
-  casalPet: '', // TODO: cole aqui o link de pagamento do plano "Casal + Pet" (R$ 230)
+  casal: 'https://mpago.la/15BqSNL', // R$ 190
+  casalPet: '', // https://mpago.la/1oU5X34 cobra R$ 249,90 (≠ R$ 230 do site). Corrigir o valor no Mercado Pago e colar o link aqui.
 }
 export const PRODUCTION_DAYS = 3
-export const SHIPPING_TEXT = 'Frete Sedex calculado pelo seu CEP e combinado pelo WhatsApp.' // TODO: confirmar se o frete é incluso ou à parte
+export const SHIPPING_TEXT = 'Frete Sedex à parte, calculado pelo CEP. Simule abaixo; o valor exato é confirmado pelo WhatsApp.'
 export const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 
 export const plans = [
   { id: 'casal', name: 'Casal', price: 190, tagline: '1 ou 2 bonecos',
-    features: ['Um ou dois personagens (você, casal, dupla)', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex'],
+    features: ['Um ou dois personagens (você, casal, dupla)', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
     msg: 'Olá! Quero comprar o plano Casal (R$ 190) da MiniVocê 3D.' },
   { id: 'casalPet', name: 'Casal + Pet', price: 230, tagline: 'Casal com seu pet', highlight: true,
-    features: ['Dois personagens + pet com pelagem e manchas', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex'],
+    features: ['Dois personagens + pet com pelagem e manchas', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
     msg: 'Olá! Quero comprar o plano Casal + Pet (R$ 230) da MiniVocê 3D.' },
   { id: 'outros', name: 'Outros', price: null, tagline: 'Preço a combinar',
-    features: ['Família, grupos, profissões, memoriais', 'Edição de colecionador com redoma', 'Orçamento pelo WhatsApp', 'Envio por Sedex'],
+    features: ['Família, grupos, profissões, memoriais', 'Edição de colecionador com redoma', 'Orçamento pelo WhatsApp', 'Envio por Sedex (frete à parte)'],
     msg: 'Olá! Quero um orçamento para um colecionável personalizado diferente (MiniVocê 3D).' },
 ]
 
@@ -90,3 +90,16 @@ export const portfolio = [
   { file: 'familia-dino', alt: 'Família colecionável com um menino abraçado a um dinossauro verde de brinquedo', label: 'Família + Dino', cat: 'Você & Amigos' },
   { file: 'veterinaria-gato', alt: 'Colecionável de veterinária de jaleco segurando um gatinho preto', label: 'Profissões e Pets', cat: 'Pets & Memoriais' },
 ]
+
+// Estimativa de Sedex saindo da Região Oeste de SP, pacote de ~1 kg (peça + caixa + proteção).
+// São VALORES APROXIMADOS (faixas) para dar uma ideia ao cliente. Ajuste com o simulador dos Correios.
+export const shippingZones = {
+  local: { label: 'Região Oeste de SP', min: 22, max: 32, days: '1 a 2 dias úteis' },
+  spGrande: { label: 'Grande São Paulo', min: 24, max: 34, days: '1 a 2 dias úteis' },
+  spInterior: { label: 'Interior de SP', min: 30, max: 42, days: '1 a 3 dias úteis' },
+  sudeste: { label: 'Sudeste (RJ, MG, ES)', min: 36, max: 50, days: '2 a 3 dias úteis' },
+  sul: { label: 'Sul', min: 42, max: 58, days: '2 a 4 dias úteis' },
+  centroOeste: { label: 'Centro-Oeste', min: 50, max: 68, days: '2 a 5 dias úteis' },
+  nordeste: { label: 'Nordeste', min: 55, max: 80, days: '3 a 6 dias úteis' },
+  norte: { label: 'Norte', min: 65, max: 95, days: '4 a 8 dias úteis' },
+}

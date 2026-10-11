@@ -1,3 +1,4 @@
+import ShippingCalc from './ShippingCalc'
 import { plans, CHECKOUT, SHIPPING_TEXT, waLink } from '../data'
 
 const brl = n => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 })
@@ -40,7 +41,7 @@ export default function Pricing() {
               <p className="mt-5 font-display text-5xl font-extrabold">
                 {p.price === null ? <span className="text-3xl">A combinar</span> : brl(p.price)}
               </p>
-              {p.price !== null && <p className={`text-sm ${p.highlight ? 'text-snow/80' : 'text-slate-600'}`}>pagamento único</p>}
+              {p.price !== null && <p className={`text-sm ${p.highlight ? 'text-snow/80' : 'text-slate-600'}`}>pagamento único + frete Sedex</p>}
               <ul className="mt-6 flex-1 space-y-3 text-sm">
                 {p.features.map(f => (
                   <li key={f} className="flex gap-2"><span aria-hidden="true" className={p.highlight ? 'text-accent' : 'text-primary'}>✔</span><span>{f}</span></li>
@@ -50,6 +51,8 @@ export default function Pricing() {
             </li>
           ))}
         </ul>
+
+        <ShippingCalc />
 
         <div className="mt-10 grid gap-4 rounded-2xl bg-surface-light p-6 text-sm text-slate-700 md:grid-cols-3">
           <p><strong>🔒 Pagamento seguro.</strong> Pix ou cartão pelo Mercado Pago, em ambiente do próprio Mercado Pago. Não armazenamos dados do seu cartão.</p>
