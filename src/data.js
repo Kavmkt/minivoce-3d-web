@@ -14,8 +14,8 @@ export const navLinks = [
 ]
 
 export const steps = [
-  { n: 1, title: 'Monte no App', tag: 'Preview instantâneo',
-    text: 'Escolha cabelo, roupas, pet e acessórios e veja a prévia na hora. Tudo pelo celular, sem precisar de conhecimento técnico.' },
+  { n: 1, title: 'Crie no App', tag: 'Prévia em minutos',
+    text: 'Envie suas fotos no app e acompanhe a criação da prévia do seu personagem. Tudo pelo celular, sem precisar de conhecimento técnico.' },
   { n: 2, title: 'Produção Artesanal 3D', tag: 'Alta definição',
     text: 'Modelagem modular, impressão 3D em alta definição e pintura detalhada à mão, peça por peça. Você aprova antes da pintura.' },
   { n: 3, title: 'Unboxing na Sua Porta', tag: 'Caixa de colecionador',
@@ -54,7 +54,7 @@ export const reviews = [
 
 export const faqs = [
   { q: 'O que é o estilo Pop cabeçudinho?', a: 'É um estilo caricatural de colecionável com cabeça grande, olhos expressivos e corpo compacto, inspirado nos bonecos “pop” de coleção. Ele destaca traços marcantes (cabelo, óculos, pelagem, manchas) em vez de buscar realismo fotográfico.' },
-  { q: 'Como o app usa as imagens e escolhas para criar o boneco?', a: 'Você escolhe as características no app (cabelo, roupa, acessórios, pet) e pode enviar fotos de referência. Elas servem de guia para a nossa equipe modelar o seu personagem. Suas imagens são usadas somente para produzir a sua peça.' },
+  { q: 'Como o app usa as imagens e escolhas para criar o boneco?', a: 'Você envia fotos de referência no app e escolhe o que quer destacar (roupa, acessórios, pet). As imagens servem de base para criar a prévia do seu personagem, que depois nossa equipe modela. Suas imagens são usadas somente para produzir a sua peça.' },
   { q: 'Posso aprovar antes de enviar para a pintura?', a: 'Sim. Depois da modelagem, você recebe uma prévia para aprovar ou pedir ajustes. A pintura só começa após o seu OK.' },
   { q: 'Como funciona a entrega em condomínios de Alphaville e Santana de Parnaíba?', a: 'Combinamos a entrega com você e informamos o nome na portaria. Em condomínios que não permitem entregadores externos, agendamos a retirada na portaria ou um ponto de encontro. A peça segue em embalagem rígida e protegida.' },
 ]
