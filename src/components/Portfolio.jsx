@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { portfolio, APP_URL } from '../data'
+import { portfolio } from '../data'
 
 const src = f => `${import.meta.env.BASE_URL}portfolio/${f}.webp`
 
@@ -40,7 +40,7 @@ export default function Portfolio() {
         </ul>
 
         <div className="mt-10 text-center">
-          <a href={APP_URL} className="btn btn-primary text-lg">Quero o meu também</a>
+          <a href="#precos" className="btn btn-primary text-lg">Quero o meu também</a>
         </div>
       </div>
 

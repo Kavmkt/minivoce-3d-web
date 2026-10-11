@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
 import HowItWorks from './components/HowItWorks'
+import Pricing from './components/Pricing'
 import Categories from './components/Categories'
 import Regions from './components/Regions'
 import Quality from './components/Quality'
@@ -18,6 +19,7 @@ export default function App() {
         <Hero />
         <Portfolio />
         <HowItWorks />
+        <Pricing />
         <Categories />
         <Regions />
         <Quality />

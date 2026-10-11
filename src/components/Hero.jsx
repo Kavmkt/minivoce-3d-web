@@ -1,5 +1,3 @@
-import { APP_URL } from '../data'
-
 const photo = `${import.meta.env.BASE_URL}portfolio/safari-familia.webp`
 
 export default function Hero() {
@@ -10,7 +8,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
         <div>
           <p className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold ring-1 ring-white/25">
-            Feito sob medida • Entrega rápida na Região Oeste de SP • Peças exclusivas
+            Feito sob medida • Envio por Sedex • Peças exclusivas
           </p>
           <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl xl:text-6xl">
             Você e seu pet transformados em <span className="text-accent">colecionáveis exclusivos.</span>
@@ -19,7 +17,7 @@ export default function Hero() {
             Envie suas fotos no nosso app, veja a prévia do seu personagem e receba em casa com acabamento artesanal e caixa de colecionador.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href={APP_URL} className="btn btn-accent text-lg">Abrir o Criador no App</a>
+            <a href="#precos" className="btn btn-accent text-lg">Comprar o meu colecionável</a>
             <a href="#portfolio" className="btn btn-ghost text-lg">Ver Galeria de Modelos</a>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { categories, APP_URL } from '../data'
+import { categories } from '../data'
 
 export default function Categories() {
   return (
@@ -12,8 +12,8 @@ export default function Categories() {
               <span className="glass grid h-20 w-20 place-items-center rounded-2xl text-4xl" aria-hidden="true">{c.emoji}</span>
               <h3 className="mt-5 text-xl font-extrabold">{c.title}</h3>
               <p className="mt-2 flex-1">{c.text}</p>
-              <a href={APP_URL} className={`mt-5 font-display font-bold underline underline-offset-4`}>
-                Criar este modelo <span aria-hidden="true">→</span>
+              <a href="#precos" className={`mt-5 font-display font-bold underline underline-offset-4`}>
+                Quero este modelo <span aria-hidden="true">→</span>
               </a>
             </li>
           ))}

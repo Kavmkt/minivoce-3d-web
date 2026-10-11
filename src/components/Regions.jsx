@@ -15,9 +15,9 @@ export default function Regions() {
           ))}
         </ul>
         <div className="mt-10 rounded-2xl bg-white/5 p-6 ring-1 ring-white/15">
-          <h3 className="text-xl font-extrabold text-accent">Frete expresso que protege peças frágeis</h3>
+          <h3 className="text-xl font-extrabold text-accent">Envio por Sedex, com rastreio</h3>
           <p className="mt-2 max-w-3xl text-snow/90">
-            Na Região Oeste usamos <strong>Uber Flash</strong> ou <strong>Lalamove</strong> para entrega no mesmo dia ou no dia seguinte, com a peça acompanhada do início ao fim. Para outras regiões, enviamos por <strong>Sedex</strong> em embalagem rígida com proteção interna contra impacto.
+            Produzimos aqui na Região Oeste de SP e enviamos por <strong>Sedex</strong> em embalagem rígida com proteção interna contra impacto, para a peça chegar inteira. Você recebe o código de rastreio assim que o pedido for postado.
           </p>
         </div>
       </div>

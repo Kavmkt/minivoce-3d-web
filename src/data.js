@@ -2,13 +2,36 @@
 export const APP_URL = 'https://app.minivoce3d.com.br' // TODO: URL real do criador
 export const WHATSAPP = '5511999999999' // TODO: DDI+DDD+número
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Quero saber mais sobre os colecionáveis MiniVocê 3D.')}`
+// Links de pagamento do Mercado Pago (Link de pagamento criado no painel do Mercado Pago).
+// Enquanto estiver vazio, o botão abre o WhatsApp com a mensagem de compra.
+export const CHECKOUT = {
+  casal: '', // TODO: cole aqui o link de pagamento do plano "Casal" (R$ 190)
+  casalPet: '', // TODO: cole aqui o link de pagamento do plano "Casal + Pet" (R$ 230)
+}
+export const PRODUCTION_DAYS = 3
+export const SHIPPING_TEXT = 'Frete Sedex calculado pelo seu CEP e combinado pelo WhatsApp.' // TODO: confirmar se o frete é incluso ou à parte
+export const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
+
+export const plans = [
+  { id: 'casal', name: 'Casal', price: 190, tagline: '1 ou 2 bonecos',
+    features: ['Um ou dois personagens (você, casal, dupla)', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex'],
+    msg: 'Olá! Quero comprar o plano Casal (R$ 190) da MiniVocê 3D.' },
+  { id: 'casalPet', name: 'Casal + Pet', price: 230, tagline: 'Casal com seu pet', highlight: true,
+    features: ['Dois personagens + pet com pelagem e manchas', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex'],
+    msg: 'Olá! Quero comprar o plano Casal + Pet (R$ 230) da MiniVocê 3D.' },
+  { id: 'outros', name: 'Outros', price: null, tagline: 'Preço a combinar',
+    features: ['Família, grupos, profissões, memoriais', 'Edição de colecionador com redoma', 'Orçamento pelo WhatsApp', 'Envio por Sedex'],
+    msg: 'Olá! Quero um orçamento para um colecionável personalizado diferente (MiniVocê 3D).' },
+]
+
 export const REPO_URL = 'https://github.com/Kavmkt/minivoce-3d-web'
 
 export const navLinks = [
   { href: '#como-funciona', label: 'Como Funciona' },
   { href: '#portfolio', label: 'Portfólio' },
+  { href: '#precos', label: 'Preços' },
   { href: '#modelos', label: 'Modelos' },
-  { href: '#regioes', label: 'Regiões de Entrega' },
+  { href: '#regioes', label: 'Entrega' },
   { href: '#avaliacoes', label: 'Avaliações' },
   { href: '#faq', label: 'FAQ' },
 ]
@@ -30,19 +53,17 @@ export const categories = [
 ]
 
 export const regions = [
-  { name: 'Alphaville & Tamboré', note: 'Entrega direta em condomínios' },
+  { name: 'Alphaville & Tamboré', note: 'Atendimento prioritário' },
   { name: 'Barueri', note: 'Centro e bairros' },
   { name: 'Santana de Parnaíba', note: 'Aldeia da Serra e região' },
   { name: 'Cajamar', note: 'Polvilho e Jordanésia' },
-  { name: 'Osasco e Grande SP', note: 'Via Lalamove, Uber Flash ou Sedex' },
+  { name: 'Osasco e Grande SP', note: 'Envio por Sedex' },
 ]
 
 export const deadlines = [
-  { stage: 'Aprovação da prévia', time: '1 dia útil', note: 'Você confirma o visual antes da pintura.' },
-  { stage: 'Modelagem e impressão 3D', time: '3 a 5 dias úteis', note: 'Prazo exemplo — ajuste conforme sua capacidade.' },
-  { stage: 'Pintura e acabamento', time: '2 a 4 dias úteis', note: 'Pintura artesanal peça a peça.' },
-  { stage: 'Envio local (Região Oeste)', time: 'Mesmo dia a 1 dia útil', note: 'Uber Flash / Lalamove.' },
-  { stage: 'Envio nacional (Sedex)', time: '2 a 7 dias úteis', note: 'Embalagem reforçada anti-impacto.' },
+  { stage: 'Pagamento confirmado', time: 'Dia 0', note: 'Pagamento integral pelo Mercado Pago (Pix ou cartão).' },
+  { stage: 'Produção artesanal', time: '3 dias após o pagamento', note: 'Modelagem, impressão 3D e pintura peça a peça.' },
+  { stage: 'Envio por Sedex', time: 'Prazo dos Correios', note: 'O prazo exato depende do CEP; você recebe o código de rastreio.' },
 ]
 
 export const reviews = [
@@ -56,7 +77,9 @@ export const faqs = [
   { q: 'O que é o estilo Pop cabeçudinho?', a: 'É um estilo caricatural de colecionável com cabeça grande, olhos expressivos e corpo compacto, inspirado nos bonecos “pop” de coleção. Ele destaca traços marcantes (cabelo, óculos, pelagem, manchas) em vez de buscar realismo fotográfico.' },
   { q: 'Como o app usa as imagens e escolhas para criar o boneco?', a: 'Você envia fotos de referência no app e escolhe o que quer destacar (roupa, acessórios, pet). As imagens servem de base para criar a prévia do seu personagem, que depois nossa equipe modela. Suas imagens são usadas somente para produzir a sua peça.' },
   { q: 'Posso aprovar antes de enviar para a pintura?', a: 'Sim. Depois da modelagem, você recebe uma prévia para aprovar ou pedir ajustes. A pintura só começa após o seu OK.' },
-  { q: 'Como funciona a entrega em condomínios de Alphaville e Santana de Parnaíba?', a: 'Combinamos a entrega com você e informamos o nome na portaria. Em condomínios que não permitem entregadores externos, agendamos a retirada na portaria ou um ponto de encontro. A peça segue em embalagem rígida e protegida.' },
+  { q: 'Como funciona a entrega em condomínios de Alphaville e Santana de Parnaíba?', a: 'O envio é feito por Sedex, com rastreio, direto para o endereço informado. Em condomínios, informe o nome do morador e o bloco/casa e avise a portaria. Se o condomínio não aceita entregas dos Correios, você pode indicar um endereço alternativo (trabalho, familiar ou agência para retirada).' },
+  { q: 'Como é o pagamento? É seguro?', a: 'O pagamento é integral e feito pelo Mercado Pago (Pix ou cartão), em ambiente do próprio Mercado Pago. Nós não vemos nem armazenamos os dados do seu cartão. Se preferir, você também pode fazer o pedido pelo WhatsApp.' },
+  { q: 'Em quanto tempo recebo?', a: 'A produção leva 3 dias após a confirmação do pagamento. Depois disso o envio é por Sedex, com código de rastreio. O prazo de entrega depende do seu CEP.' },
 ]
 
 export const portfolio = [
