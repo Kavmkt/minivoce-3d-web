@@ -6,6 +6,7 @@ export const REPO_URL = 'https://github.com/Kavmkt/minivoce-3d-web'
 
 export const navLinks = [
   { href: '#como-funciona', label: 'Como Funciona' },
+  { href: '#portfolio', label: 'Portfólio' },
   { href: '#modelos', label: 'Modelos' },
   { href: '#regioes', label: 'Regiões de Entrega' },
   { href: '#avaliacoes', label: 'Avaliações' },
@@ -56,4 +57,13 @@ export const faqs = [
   { q: 'Como o app usa as imagens e escolhas para criar o boneco?', a: 'Você escolhe as características no app (cabelo, roupa, acessórios, pet) e pode enviar fotos de referência. Elas servem de guia para a nossa equipe modelar o seu personagem. Suas imagens são usadas somente para produzir a sua peça.' },
   { q: 'Posso aprovar antes de enviar para a pintura?', a: 'Sim. Depois da modelagem, você recebe uma prévia para aprovar ou pedir ajustes. A pintura só começa após o seu OK.' },
   { q: 'Como funciona a entrega em condomínios de Alphaville e Santana de Parnaíba?', a: 'Combinamos a entrega com você e informamos o nome na portaria. Em condomínios que não permitem entregadores externos, agendamos a retirada na portaria ou um ponto de encontro. A peça segue em embalagem rígida e protegida.' },
+]
+
+export const portfolio = [
+  { file: 'safari-familia', alt: 'Família de três colecionáveis com roupas de safári: pai com binóculos, mãe com chapéu e filho com lupa', label: 'Família Safári', cat: 'Você & Amigos' },
+  { file: 'casamento', alt: 'Casal de noivos colecionáveis: noivo de smoking com barba e noiva de vestido branco com buquê', label: 'Casamento', cat: 'Casais & Duplas' },
+  { file: 'casal-banco-bulldog', alt: 'Casal colecionável sentado em um banco com um bulldog inglês entre os dois', label: 'Casal + Pet', cat: 'Pets & Memoriais' },
+  { file: 'casal-anos-50', alt: 'Casal colecionável estilo anos 50: ele de jaqueta de couro e ela de vestido vermelho de bolinhas', label: 'Casal Anos 50', cat: 'Casais & Duplas' },
+  { file: 'familia-dino', alt: 'Família colecionável com um menino abraçado a um dinossauro verde de brinquedo', label: 'Família + Dino', cat: 'Você & Amigos' },
+  { file: 'veterinaria-gato', alt: 'Colecionável de veterinária de jaleco segurando um gatinho preto', label: 'Profissões e Pets', cat: 'Pets & Memoriais' },
 ]
