@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6C38FF;
+  --color-primary-600: #5B25F0;
+  --color-accent: #FFD027;
+  --color-warm: #FF6584;
+  --color-surface-dark: #0F1424;
+  --color-surface-light: #F8F9FC;
+  --color-ink: #1E293B;
+  --color-snow: #F8FAFC;
+  --font-display: "Plus Jakarta Sans", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { font-family: var(--font-sans); color: var(--color-ink); background: var(--color-surface-light); }
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; border-radius: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+.glass {
+  background: linear-gradient(135deg, rgb(255 255 255 / .55), rgb(255 255 255 / .12));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / .55);
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font-family: var(--font-display); font-weight: 800; border-radius: 1rem;
+  padding: .85rem 1.5rem; min-height: 48px;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn-accent { background: var(--color-accent); color: var(--color-ink); box-shadow: 0 6px 0 #C79A00; }
+.btn-accent:hover { box-shadow: 0 8px 0 #C79A00; }
+.btn-ghost { background: rgb(255 255 255 / .12); color: #fff; border: 2px solid rgb(255 255 255 / .6); }
+.btn-ghost:hover { background: rgb(255 255 255 / .22); }
+.btn-primary { background: var(--color-primary); color: #fff; }
+.btn-primary:hover { background: var(--color-primary-600); }
