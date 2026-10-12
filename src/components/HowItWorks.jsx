@@ -8,7 +8,7 @@ export default function HowItWorks() {
     <section id="como-funciona" className="bg-surface-light py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-extrabold sm:text-4xl">Como funciona em 3 passos</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">Do app até a sua porta, com você no controle de cada etapa.</p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">Das suas fotos até a sua porta, com você aprovando a arte antes de pagar.</p>
 
         <div role="tablist" aria-label="Passos" className="mt-10 grid gap-3 sm:grid-cols-3">
           {steps.map((st, i) => (

@@ -1,3 +1,5 @@
+import { waLink } from '../data'
+
 const photo = `${import.meta.env.BASE_URL}portfolio/safari-familia.webp`
 
 export default function Hero() {
@@ -14,11 +16,11 @@ export default function Hero() {
             Você e seu pet transformados em <span className="text-accent">colecionáveis exclusivos.</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-snow/90">
-            Envie suas fotos no nosso app, veja a prévia do seu personagem e receba em casa com acabamento artesanal e caixa de colecionador.
+            Envie suas fotos pelo WhatsApp, aprove a arte do seu personagem e receba em casa com acabamento artesanal e caixa de colecionador.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#precos" className="btn btn-accent text-lg">Comprar o meu colecionável</a>
-            <a href="#portfolio" className="btn btn-ghost text-lg">Ver Galeria de Modelos</a>
+            <a href={waLink('Olá! Quero fazer o meu colecionável MiniVocê 3D. Vou enviar as fotos de referência.')} target="_blank" rel="noopener noreferrer" className="btn btn-accent text-lg">Enviar minhas fotos</a>
+            <a href="#precos" className="btn btn-ghost text-lg">Ver preços</a>
           </div>
         </div>
 

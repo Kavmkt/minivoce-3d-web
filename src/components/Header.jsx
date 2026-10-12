@@ -16,7 +16,7 @@ export default function Header() {
           ))}
         </ul>
         <div className="flex items-center gap-2">
-          <a href="#precos" className="btn btn-accent !min-h-[40px] !px-3 !py-2 text-sm !shadow-none sm:!px-4" aria-label="Comprar meu colecionável">Comprar<span className="hidden sm:inline"> agora</span></a>
+          <a href="#precos" className="btn btn-accent !min-h-[40px] !px-3 !py-2 text-sm !shadow-none sm:!px-4" aria-label="Pedir meu colecionável">Pedir<span className="hidden sm:inline"> agora</span></a>
           <button
             type="button"
             className="grid h-11 w-11 place-items-center rounded-xl ring-1 ring-white/30 lg:hidden"

@@ -11,7 +11,7 @@ npm run preview
 ```
 
 ## Personalização
-Todo o conteúdo (links do app, WhatsApp, prazos, avaliações, FAQ) fica em [`src/data.js`](src/data.js). **Antes de publicar**, troque `APP_URL`, `WHATSAPP`, `REPO_URL`, os prazos de exemplo e as avaliações de exemplo por dados reais.
+Todo o conteúdo (links de pagamento do Mercado Pago, WhatsApp, prazos, avaliações, FAQ) fica em [`src/data.js`](src/data.js). **Antes de publicar**, confira `WHATSAPP`, `CHECKOUT`, `REPO_URL`, os prazos de exemplo e adicione avaliações reais de clientes.
 
 Cores e fontes são tokens em [`src/index.css`](src/index.css) (`@theme`).
 

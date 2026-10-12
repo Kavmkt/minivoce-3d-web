@@ -1,5 +1,4 @@
 // Conteúdo editável do site. Altere aqui prazos, links e textos sem mexer nos componentes.
-export const APP_URL = 'https://app.minivoce3d.com.br' // TODO: URL real do criador
 export const WHATSAPP = '5511993697504'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Quero saber mais sobre os colecionáveis MiniVocê 3D.')}`
 // Links de pagamento do Mercado Pago (Link de pagamento criado no painel do Mercado Pago).
@@ -14,11 +13,11 @@ export const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponen
 
 export const plans = [
   { id: 'casal', name: 'Casal', price: 190, tagline: '1 ou 2 bonecos',
-    features: ['Um ou dois personagens (você, casal, dupla)', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
-    msg: 'Olá! Quero comprar o plano Casal (R$ 190) da MiniVocê 3D.' },
+    features: ['Um ou dois personagens (você, casal, dupla)', 'Pintura artesanal e caixa de colecionador', 'Criação da arte a partir das suas fotos, com aprovação antes de produzir', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
+    msg: 'Olá! Quero o plano Casal (R$ 190) da MiniVocê 3D. Vou enviar as fotos de referência.' },
   { id: 'casalPet', name: 'Casal + Pet', price: 230, tagline: 'Casal com seu pet', highlight: true,
-    features: ['Dois personagens + pet com pelagem e manchas', 'Pintura artesanal e caixa de colecionador', 'Acesso ao app para criar o seu personagem', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
-    msg: 'Olá! Quero comprar o plano Casal + Pet (R$ 230) da MiniVocê 3D.' },
+    features: ['Dois personagens + pet com pelagem e manchas', 'Pintura artesanal e caixa de colecionador', 'Criação da arte a partir das suas fotos, com aprovação antes de produzir', 'Produção em 3 dias após o pagamento', 'Envio por Sedex (frete à parte)'],
+    msg: 'Olá! Quero o plano Casal + Pet (R$ 230) da MiniVocê 3D. Vou enviar as fotos de referência.' },
   { id: 'outros', name: 'Outros', price: null, tagline: 'Preço a combinar',
     features: ['Família, grupos, profissões, memoriais', 'Edição de colecionador com redoma', 'Orçamento pelo WhatsApp', 'Envio por Sedex (frete à parte)'],
     msg: 'Olá! Quero um orçamento para um colecionável personalizado diferente (MiniVocê 3D).' },
@@ -32,17 +31,16 @@ export const navLinks = [
   { href: '#precos', label: 'Preços' },
   { href: '#modelos', label: 'Modelos' },
   { href: '#regioes', label: 'Entrega' },
-  { href: '#avaliacoes', label: 'Avaliações' },
   { href: '#faq', label: 'FAQ' },
 ]
 
 export const steps = [
-  { n: 1, title: 'Crie no App', tag: 'Prévia em minutos',
-    text: 'Envie suas fotos no app e acompanhe a criação da prévia do seu personagem. Tudo pelo celular, sem precisar de conhecimento técnico.' },
-  { n: 2, title: 'Produção Artesanal 3D', tag: 'Alta definição',
-    text: 'Modelagem modular, impressão 3D em alta definição e pintura detalhada à mão, peça por peça. Você aprova antes da pintura.' },
-  { n: 3, title: 'Unboxing na Sua Porta', tag: 'Caixa de colecionador',
-    text: 'Peça selada em caixa personalizada com o seu nome e uma mini biografia impressa, pronta para presentear ou exibir.' },
+  { n: 1, title: 'Envie suas fotos', tag: 'Pelo WhatsApp',
+    text: 'Escolha o plano e mande no WhatsApp as fotos de referência de você, do casal ou do pet, e conte detalhes como roupa e acessórios. Sem cadastro e sem complicação.' },
+  { n: 2, title: 'Escolha a sua arte', tag: 'Você aprova antes de pagar',
+    text: 'Criamos opções de arte do seu personagem e enviamos para você. Você escolhe a preferida, pede ajustes se quiser e só então paga pelo link seguro do Mercado Pago.' },
+  { n: 3, title: 'Produção e entrega', tag: 'Caixa de colecionador',
+    text: 'Em 3 dias após o pagamento a peça é impressa em 3D e pintada à mão. Ela segue por Sedex com rastreio, selada em caixa personalizada com o seu nome.' },
 ]
 
 export const categories = [
@@ -61,24 +59,18 @@ export const regions = [
 ]
 
 export const deadlines = [
-  { stage: 'Pagamento confirmado', time: 'Dia 0', note: 'Pagamento integral pelo Mercado Pago (Pix ou cartão).' },
-  { stage: 'Produção artesanal', time: '3 dias após o pagamento', note: 'Modelagem, impressão 3D e pintura peça a peça.' },
-  { stage: 'Envio por Sedex', time: 'Prazo dos Correios', note: 'O prazo exato depende do CEP; você recebe o código de rastreio.' },
+  { stage: 'Envio das fotos e criação da arte', time: 'Combinado pelo WhatsApp', note: 'Você recebe opções de arte para escolher e aprovar.' },
+  { stage: 'Pagamento (após aprovar a arte)', time: 'Pix ou cartão', note: 'Pagamento integral pelo Mercado Pago.' },
+  { stage: 'Produção artesanal', time: '3 dias após o pagamento', note: 'Impressão 3D e pintura peça a peça.' },
+  { stage: 'Envio por Sedex', time: 'Prazo dos Correios', note: 'O prazo depende do CEP; você recebe o código de rastreio.' },
 ]
-
-export const reviews = [
-  { name: 'Camila R.', place: 'Alphaville', text: 'Fiz o meu e do meu golden. Ficou a cara dos dois, e a caixa é linda demais!' },
-  { name: 'Rafael T.', place: 'Barueri', text: 'Presente de aniversário de namoro. Minha namorada chorou. Chegou rápido e bem protegido.' },
-  { name: 'Juliana M.', place: 'Santana de Parnaíba', text: 'Aprovei a prévia antes da pintura, isso me deu muita segurança. Atendimento excelente.' },
-]
-// Substitua pelas avaliações reais dos seus clientes antes de publicar.
 
 export const faqs = [
   { q: 'O que é o estilo Pop cabeçudinho?', a: 'É um estilo caricatural de colecionável com cabeça grande, olhos expressivos e corpo compacto, inspirado nos bonecos “pop” de coleção. Ele destaca traços marcantes (cabelo, óculos, pelagem, manchas) em vez de buscar realismo fotográfico.' },
-  { q: 'Como o app usa as imagens e escolhas para criar o boneco?', a: 'Você envia fotos de referência no app e escolhe o que quer destacar (roupa, acessórios, pet). As imagens servem de base para criar a prévia do seu personagem, que depois nossa equipe modela. Suas imagens são usadas somente para produzir a sua peça.' },
-  { q: 'Posso aprovar antes de enviar para a pintura?', a: 'Sim. Depois da modelagem, você recebe uma prévia para aprovar ou pedir ajustes. A pintura só começa após o seu OK.' },
+  { q: 'Como funciona o envio das fotos e a criação do personagem?', a: 'Você escolhe o plano e envia as fotos de referência pelo WhatsApp (e detalhes como roupa, acessórios e pet). Nós criamos opções de arte do seu personagem e enviamos para você escolher. Suas fotos são usadas somente para produzir a sua peça.' },
+  { q: 'Posso aprovar antes de pagar e de ir para a produção?', a: 'Sim. Você recebe as opções de arte, escolhe a que mais gostou e pode pedir ajustes. O pagamento e a produção só começam depois da sua aprovação.' },
   { q: 'Como funciona a entrega em condomínios de Alphaville e Santana de Parnaíba?', a: 'O envio é feito por Sedex, com rastreio, direto para o endereço informado. Em condomínios, informe o nome do morador e o bloco/casa e avise a portaria. Se o condomínio não aceita entregas dos Correios, você pode indicar um endereço alternativo (trabalho, familiar ou agência para retirada).' },
-  { q: 'Como é o pagamento? É seguro?', a: 'O pagamento é integral e feito pelo Mercado Pago (Pix ou cartão), em ambiente do próprio Mercado Pago. Nós não vemos nem armazenamos os dados do seu cartão. Se preferir, você também pode fazer o pedido pelo WhatsApp.' },
+  { q: 'Como é o pagamento? É seguro?', a: 'Depois que você aprova a arte, o pagamento é integral e feito pelo Mercado Pago (Pix ou cartão), em ambiente do próprio Mercado Pago. Nós não vemos nem armazenamos os dados do seu cartão. Se preferir, você também pode fazer o pedido pelo WhatsApp.' },
   { q: 'Em quanto tempo recebo?', a: 'A produção leva 3 dias após a confirmação do pagamento. Depois disso o envio é por Sedex, com código de rastreio. O prazo de entrega depende do seu CEP.' },
 ]
 

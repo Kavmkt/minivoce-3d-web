@@ -11,7 +11,7 @@ export default function Quality() {
           </p>
           <ul className="mt-5 space-y-3 text-slate-700">
             <li className="flex gap-3"><span aria-hidden="true">🎨</span> Acabamento e pintura artesanais: pequenas variações fazem parte de cada peça.</li>
-            <li className="flex gap-3"><span aria-hidden="true">✅</span> Você aprova a prévia antes da pintura.</li>
+            <li className="flex gap-3"><span aria-hidden="true">✅</span> Você aprova a arte antes de pagar e de produzir.</li>
             <li className="flex gap-3"><span aria-hidden="true">📦</span> Embalagem reforçada para transporte seguro.</li>
           </ul>
         </div>

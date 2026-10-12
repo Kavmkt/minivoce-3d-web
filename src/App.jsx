@@ -6,7 +6,6 @@ import Pricing from './components/Pricing'
 import Categories from './components/Categories'
 import Regions from './components/Regions'
 import Quality from './components/Quality'
-import Reviews from './components/Reviews'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 
@@ -23,7 +22,6 @@ export default function App() {
         <Categories />
         <Regions />
         <Quality />
-        <Reviews />
         <FAQ />
       </main>
       <Footer />

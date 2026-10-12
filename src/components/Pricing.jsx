@@ -6,15 +6,21 @@ const brl = n => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL',
 function Cta({ plan }) {
   const link = CHECKOUT[plan.id]
   const isQuote = plan.price === null
-  const href = link || waLink(plan.msg)
-  const label = isQuote ? 'Pedir orçamento' : link ? 'Pagar com Mercado Pago' : 'Comprar pelo WhatsApp'
   return (
-    <a
-      href={href} target="_blank" rel="noopener noreferrer"
-      className={`btn w-full ${plan.highlight ? 'btn-accent' : 'btn-primary'}`}
-    >
-      {label}
-    </a>
+    <div className="space-y-3">
+      <a
+        href={waLink(plan.msg)} target="_blank" rel="noopener noreferrer"
+        className={`btn w-full ${plan.highlight ? 'btn-accent' : 'btn-primary'}`}
+      >
+        {isQuote ? 'Pedir orçamento' : 'Enviar fotos no WhatsApp'}
+      </a>
+      {link && (
+        <a href={link} target="_blank" rel="noopener noreferrer"
+           className={`block text-center text-sm font-bold underline ${plan.highlight ? 'text-accent' : 'text-primary-600'}`}>
+          Já aprovou a arte? Pagar com Mercado Pago
+        </a>
+      )}
+    </div>
   )
 }
 
@@ -24,7 +30,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-extrabold sm:text-4xl">Escolha o seu colecionável</h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">
-          Preço fechado, pagamento integral e produção em 3 dias após a confirmação.
+          Você aprova a arte antes de pagar. Pagamento integral e produção em 3 dias após a confirmação.
         </p>
 
         <ul className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -57,7 +63,7 @@ export default function Pricing() {
         <div className="mt-10 grid gap-4 rounded-2xl bg-surface-light p-6 text-sm text-slate-700 md:grid-cols-3">
           <p><strong>🔒 Pagamento seguro.</strong> Pix ou cartão pelo Mercado Pago, em ambiente do próprio Mercado Pago. Não armazenamos dados do seu cartão.</p>
           <p><strong>📦 Envio por Sedex.</strong> Com rastreio e embalagem protegida. {SHIPPING_TEXT}</p>
-          <p><strong>💬 Prefere conversar?</strong> Faça o pedido pelo <a className="font-bold text-primary-600 underline" href={waLink('Olá! Quero fazer um pedido da MiniVocê 3D pelo WhatsApp.')} target="_blank" rel="noopener noreferrer">WhatsApp</a>. Você será atendido por lá e finaliza a compra pelo link seguro.</p>
+          <p><strong>💬 Prefere conversar?</strong> Comece o pedido pelo <a className="font-bold text-primary-600 underline" href={waLink('Olá! Quero fazer um pedido da MiniVocê 3D pelo WhatsApp.')} target="_blank" rel="noopener noreferrer">WhatsApp</a>. Você envia as fotos, recebe as opções de arte e, ao aprovar, finaliza pelo link seguro.</p>
         </div>
       </div>
     </section>
